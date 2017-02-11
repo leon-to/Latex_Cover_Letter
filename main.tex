@@ -1,5 +1,85 @@
-\documentclass{article}
-\usepackage[utf8]{inputenc}
+%Author: Khoi To
+%Project: Cover letter
+\documentclass[11pt]{article}
+\usepackage[letterpaper, margin=1in]{geometry}
+\usepackage[utf8]{inputenc}						
+\thispagestyle{empty}
+
+%------------     HELPFUL COMMANDS      ------------
+%apostrophe:		\usepackage[utf8]{inputenc}	
+%superscript: 		\textsuperscript
+%font size: 		\huge, \small
+%unnumber page: 	\thispagestyle{empty}
+
+
+%------------       COMPANY INFO        ------------
+%description:  you only need to update information
+%			   of company here for each cover letter
+\newcommand{\CompanyName}       {Company Name}
+\newcommand{\CompanyAddress}{
+	Street address\\
+    City, Province\\
+    Postal Code				
+    }
+\newcommand{\Position}          {Job Title}
+\newcommand{\Technology}        {technology}
+\newcommand{\Subject}			{They are}
+\newcommand{\CompanyReputation} {Company description}
+
+
+
+%------------       CANDIDATE INFO       ------------
+\newcommand{\Name}{Candidate Name}
+\newcommand{\Contact}{
+    Street Address               \\
+    city, province, postal code        \\
+    email    \\
+    phone number
+    }
+
+%------------         CONSTANTS          ------------
+\newcommand{\SPACE}{0.2cm}
+
+%------------         FUNCTIONS          ------------
+\newcommand{\Greet}{
+    Dear Hiring Manager,
+}
+\newcommand{\What}{
+    The introductory paragraph should state your purpose for writing. Specify the advertised position or outline the type of work you are seeking, and explain why the employer would have an interest in you. You may also mention how you heard of the opening (such as from eSIP/PEY program, family, friend, professor).
+}
+\newcommand{\Why}{
+    Customize your letter to letter explain your fit for this position and you interest in this company. Make a personal connection, whether it is regarding the company's products, reputation or values. This should be unique to every letter you write, generic cover letters are easy to spot and often overlooked by employers.
+}
+\newcommand{\Match}{
+    The middle paragraph(s) (at most two or three) should highlight you strengths and abilities. Most importantly, try to provide examples of you skills and experience and demonstrate how they relate to the position/company. For example, you can feature related work or volunteer experience, extracurricular activities, interests, education, training, or any other qualifications you may have for this type of work.\\\hfill\break
+    Focus on what contributions you can make to the organization rather than how you would benefit from the experience if you are hired. When appropriate, you can elaborate on your courses, thesis topic, or fieldwork. Make sure you statements indicate that you have researched the organization and understand the nature of the work it does. 
+}
+\newcommand{\Thank}{
+    The concluding paragraph should thank the employer for his or her consideration of your application (resume and cover letter) and provide contact information where you can be reached to set up an interview. \\\hfill\break
+    Sincerely,
+}
+%----------------------------------------------------
+%------------            MAIN            ------------    
+%----------------------------------------------------
 \begin{document}
-(Type your content here.)
+    \begin{flushright}                                      %---   CANDIDATE CONTACT INFO  
+        \Contact
+    \end{flushright}
+    
+    \begin{flushleft}
+        \hfill\newline\newline\newline
+        \textbf{\huge \Name}                                %---   NAME    
+        \vspace{\SPACE}\hrule\vspace{\SPACE}
+        \today              \newline\newline\newline    	%---   DATE (today)   
+        \CompanyName        \newline                        %---   COMPANY INFO   
+        \CompanyAddress     \newline\newline
+        \Greet              \newline\newline
+        \What               \newline\newline
+        \Why                \newline\newline
+        \Match              \newline\newline
+        \Thank              \newline
+        \Name               
+    \end{flushleft}
+    
 \end{document}
+
